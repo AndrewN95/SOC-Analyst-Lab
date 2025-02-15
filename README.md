@@ -46,8 +46,17 @@ With ps -T we can find what security products are on the machine and our C2 sess
 
 ![image](https://github.com/user-attachments/assets/598cca44-c946-44db-a858-10e63c5b4aea)
 
-# EDR
-Heading back to LimaCharlie, I explored the platform to gain a better understanding of its capabilities. I am able to see processes, and in particular, the process of the C2 session. 
+# Exploring LimaCharlie
+Heading back to LimaCharlie, I explored the platform to gain a better understanding of its capabilities. I am able to see processes, and in particular, the process of the C2 session. I also went through timeline and file system which allowed to be check the hash of the file for OSINT.
 
 ![image](https://github.com/user-attachments/assets/8b2f8db5-2ee1-4f1d-8b3a-8aa8692d9d95)
+
+# LSASS and detection
+Now it's time to simulate an attack. With the sliver listener active, I run the malware on the Windows machine. From the Kali attack machine, I am able to type getprivs to see what privileges I have. The image below shows the SeDebugPrivilege which I can use procdump and lsass.exe to dump the remote process from memory which is a way to obtain operating system credentials for lateral movement.
+
+![image](https://github.com/user-attachments/assets/b8e9adc3-cfc2-47bb-ae1b-a1e761a53c8d)
+
+Back in LimaCharlie, I searched for the LSASS.exe process by looking for SENSITIVE_PROCESS_ACCESS. Once I found the process, I can click on the button shown below to create a detection rule.
+
+![image](https://github.com/user-attachments/assets/8c5c42f3-0242-4785-8cfa-6ecef49669e0)
 
