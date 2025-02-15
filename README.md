@@ -24,6 +24,30 @@ Once I changed into the directory of sliver, I launched the sliver server.
 
 ![image](https://github.com/user-attachments/assets/4d7d8dbd-7685-44a6-8758-b08af014c74b)
 
-Now that the sliver server is up, I generated a payload using the command below
+Now that the sliver server is up, I generated a payload using the command below.
 
 ![image](https://github.com/user-attachments/assets/1e348849-956d-4cf3-8758-6f8f135fc820)
+
+To get the payload onto the Windows machine, I created a web server on the Kali machine and then typed the command from the guide which downloads the payload onto the Windows machine.
+
+![image](https://github.com/user-attachments/assets/30398701-c456-4d7d-8543-8c2fe14e3458)
+![image](https://github.com/user-attachments/assets/b7be15a6-ff84-4627-96e0-51889e07323a)
+
+After that, I started the sliver listener by typing http and then I executed the payload on the Windows machine.
+
+![image](https://github.com/user-attachments/assets/faebc068-cbb4-4128-84e6-9cbd21a35e1e)
+
+# We're in. 
+I typed 'sessions' which gave me the ID of the session and by typing 'use a60ebeea' I started a command and control session.
+
+![image](https://github.com/user-attachments/assets/59cec898-0e64-4c08-b143-b048df56570b)
+
+With ps -T we can find what security products are on the machine and our C2 session process.
+
+![image](https://github.com/user-attachments/assets/598cca44-c946-44db-a858-10e63c5b4aea)
+
+# EDR
+Heading back to LimaCharlie, I explored the platform to gain a better understanding of its capabilities. I am able to see processes, and in particular, the process of the C2 session. 
+
+![image](https://github.com/user-attachments/assets/8b2f8db5-2ee1-4f1d-8b3a-8aa8692d9d95)
+
