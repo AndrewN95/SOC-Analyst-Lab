@@ -60,3 +60,7 @@ Back in LimaCharlie, I searched for the LSASS.exe process by looking for SENSITI
 
 ![image](https://github.com/user-attachments/assets/8c5c42f3-0242-4785-8cfa-6ecef49669e0)
 
+In the detection rule editor, I specified that the detection rule should look for SENSITIVE_PROCESS_ACCESS events that end with lsass.exe and the response should be to report it as a LSASS access.
+
+![image](https://github.com/user-attachments/assets/2c1ad833-80be-43b3-bef2-82e5bc41ee82)
+
