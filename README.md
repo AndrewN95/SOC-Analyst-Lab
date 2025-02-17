@@ -64,3 +64,11 @@ In the detection rule editor, I specified that the detection rule should look fo
 
 ![image](https://github.com/user-attachments/assets/2c1ad833-80be-43b3-bef2-82e5bc41ee82)
 
+In the lab, Capuano mentions that a basic command with low false positive rates and high threat activity is vssadmin delete shadows /all. With this information, we can create a rule to detect the command. First, I ran the command vssadmin delete shadows /all to generate telemetry that I can use to create the detection rule.
+
+![image](https://github.com/user-attachments/assets/20282fa2-497d-40f9-9f7e-6b4bb673dde4)
+![image](https://github.com/user-attachments/assets/d4f9b051-7b25-4a16-b4d9-d5fb62415b08)
+
+With this rule, when typing vssadmin delete shadows /all the shell will hang.
+
+![image](https://github.com/user-attachments/assets/3c5b4fda-76e1-4480-80dc-36629b6defeb)
