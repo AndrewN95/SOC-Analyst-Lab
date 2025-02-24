@@ -1,6 +1,6 @@
 # SOC-Analyst-Lab
 This project follows Eric Capuano's SOC Analyst lab which covers virtualization, adversary simulation, fine tuning of detection rules, incident response, and rule-based threat detection. The lab makes use of LimaCharlie, a cloud-based SOC platform.
-
+Eric's SOC analyst lab: https://blog.ecapuano.com/p/so-you-want-to-be-a-soc-analyst-intro
 # Setting up the virtual environment
 Instead of using VMware, I used my homelab hosted on Proxmox. After the installation of the Ubuntu server and Windows 10 machines, I logged onto the Windows VM first. The first step in the guide is to disable Microsoft Defender which included disabling tamper protection, disabling Microsoft Defender via Group Policy Editor, disabling defender via registry, and booting in safe mode to disable more services via registry. After that, I proceeded onto the next step of installing Sysmon. I ran the commands from the lab and installed sysmon using SwiftOnSecurity's config.
 
